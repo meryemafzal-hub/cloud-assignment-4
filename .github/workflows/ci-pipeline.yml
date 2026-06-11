@@ -1,0 +1,25 @@
+name: Practical Implementation Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository Code
+        uses: actions/checkout@v4
+
+      - name: Show Current Directory
+        run: pwd
+
+      - name: List Files
+        run: ls -la
+
+      - name: Make Directory
+        run: mkdir my-new-directory
+
+      - name: Echo Message
+        run: echo "I am learning Github Actions"
